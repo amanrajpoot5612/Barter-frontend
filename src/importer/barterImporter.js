@@ -89,21 +89,23 @@ const nationalShowInfo = {
       ],
     },
     {
-      title: "IPL",
+      title: "IPL & Asi Cup",
       type: "card",
       images: [
         { name: "Product 1", img: IPLImages[0] },
         { name: "Product 2", img: IPLImages[1] },
-      ],
-    },
-    {
-      title: "Asia Cup",
-      type: "card",
-      images: [
         { name: "Product 1", img: AsiaCupImages[0] },
         { name: "Product 2", img: AsiaCupImages[1] },
       ],
     },
+    // {
+    //   title: "Asia Cup",
+    //   type: "card",
+    //   images: [
+    //     { name: "Product 1", img: AsiaCupImages[0] },
+    //     { name: "Product 2", img: AsiaCupImages[1] },
+    //   ],
+    // },
     {
       title: "News Channel",
       type: "slide",

@@ -8,7 +8,7 @@ const Footer = ({footerInfo}) => {
     <div className="bg-gray-300 flex flex-col p-5">
       <div className="upper-container-footer flex pb-6">
         <div className="upper-left-img-section flex-1 p-5">
-          <img src={footerInfo.logo} alt="Footer Logo" className="max-w-2/3 rounded-2xl"/>
+          <img src={footerInfo.logo} alt="Footer Logo" className="max-w-1/3 rounded-2xl"/>
         </div>
         <div className="upper-right-footer-section flex-1 flex flex-col gap-6 p-6">
           <div className="footer-company-name text-5xl uppercase">

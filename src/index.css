@@ -26,15 +26,15 @@ p {
   --color-body-text: #2d2d2d;
 
   /* primary color */
-  --color-primary-dark: #8b4167; /* Dark Pink, for heading*/
-  --color-primary-light: #f2bed1; /* Light Pink, for heading*/
+  --color-primary-dark: #bbbbbb; /* Dark Pink, for heading*/
+  --color-primary-light: #bbbbbb; /* Light Pink, for heading*/
 
   --color-secondary: #ff9800; /* Orange */
   --color-tertiary: #4caf50; /* Green */
 
   /* background color */
-  --color-background-dark: #fdcedf; /* Dark Pink */
-  --color-background-light: #f9f5f6; /* Light Pink */
+  --color-background-dark: #f4f4f4; /* Dark Pink */
+  --color-background-light: #d3d3d3; /* Light Pink */
 }
 
 hr{
