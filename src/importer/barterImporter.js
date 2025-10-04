@@ -18,6 +18,7 @@ import {
 
 const productInfo = {
   category: "Barter Products",
+  key: "barterproducts",
   subCategory: [
     {
       title: "ALL BARTER MEDIA PRODUCTS",
@@ -46,6 +47,7 @@ const productInfo = {
 
 const nationalShowInfo = {
   category: "NATIONAL SHOWS IN BARTER",
+  key: "nationalshows",
   subCategory: [
     // tv shows
     {
@@ -174,6 +176,7 @@ const nationalShowInfo = {
 
 const regionalShowInfo = {
   category: "Regional Shows in Barter",
+  key: "regionalshows",
   subCategory: [
     {
       title: "India News in Barter",
