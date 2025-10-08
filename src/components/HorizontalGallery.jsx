@@ -28,21 +28,21 @@ const HorizontalGallery = ({ images = [], speed = 0.5 }) => {
 
   return (
     <div
-      className="overflow-hidden w-full relative bg-gradient-to-r from-[var(--color-background-light)] to-[var(--color-background-dark)]"
+      className="overflow-hidden w-9/10 relative rounded-2xl bg-gradient-to-b from-gray-800 via-gray-600 to-gray-400"
       onMouseEnter={() => setDirection(1)}
       onMouseLeave={() => setDirection(-1)}
     >
       <div
         ref={containerRef}
-        className="flex whitespace-nowrap"
+        className="flex whitespace-nowrap wrapper rounded-2xl"
         style={{ transform: `translateX(${position}px)` }}
-      >
+      > 
         {[...images, ...images].map((img, index) => (
           <img
             key={index}
             src={img.img} // make sure this property exists!
             alt={img.name || `gallery-${index}`}
-            className="w-48 h-48 object-contain mx-2 flex-shrink-0"
+            className={`w-48 h-48 object-contain mx-2 flex-shrink-0 item${index+1}`}
             draggable={false}
           />
         ))}

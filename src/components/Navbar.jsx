@@ -13,8 +13,11 @@ const Navbar = ({ NavItems }) => {
   };
 
   return (
-    <nav className="navbar-component fixed top-0 bg-white shadow-md z-50 w-full" id="navbar">
-      <div className="flex justify-between items-center h-[55px] px-4 md:px-8">
+    <nav
+      className="navbar-component fixed top-0 z-50 w-full bg-transparent shadow-md"
+      id="navbar"
+    >
+      <div className="flex h-[55px] items-center justify-between rounded-b-2xl bg-black px-4 md:px-8">
         {/* Logo */}
         <div className="flex items-center">
           {NavItems.find((item) => item.key === "logo")?.icon && (
@@ -23,18 +26,18 @@ const Navbar = ({ NavItems }) => {
               alt="Logo"
               width={70}
               height={70}
-              className="cursor-pointer hover:scale-105 transition-transform duration-300"
+              className="cursor-pointer transition-transform duration-300 hover:scale-105"
             />
           )}
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex text-[18px] gap-7">
+        <ul className="hidden gap-7 text-[18px] md:flex">
           {NavItems.filter((item) => item.key !== "logo").map((item) => (
             <li
               key={item.key}
               onClick={() => onClick(item.key)}
-              className="hover:underline hover:text-blue-500 hover:font-medium hover:cursor-pointer hover:scale-110 transition-all duration-300 text-gray-700"
+              className="text-gray-200 transition-all duration-300 hover:scale-110 hover:cursor-pointer hover:font-medium hover:text-white hover:underline"
             >
               {/* <a href={item.key}> */}
               {item.label}
@@ -50,7 +53,7 @@ const Navbar = ({ NavItems }) => {
             className="focus:outline-none"
           >
             <svg
-              className="w-7 h-7 text-gray-700"
+              className="h-7 w-7 text-gray-700"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -78,12 +81,12 @@ const Navbar = ({ NavItems }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden flex flex-col items-center gap-6 py-4 bg-white shadow-md">
+        <ul className="flex flex-col items-center gap-6 bg-white py-4 shadow-md md:hidden">
           {NavItems.filter((item) => item.key !== "logo").map((item) => (
             <li
               key={item.key}
               onClick={() => onClick(item.key)}
-              className="hover:underline hover:text-blue-500 hover:font-medium hover:cursor-pointer transition-all duration-300 text-gray-700"
+              className="text-gray-700 transition-all duration-300 hover:cursor-pointer hover:font-medium hover:text-blue-500 hover:underline"
             >
               {/* <a href={item.key}> */}
               {item.label}
