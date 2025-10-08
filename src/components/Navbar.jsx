@@ -32,7 +32,7 @@ const Navbar = ({ NavItems }) => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden gap-7 text-[18px] md:flex">
+        <ul className="hidden gap-7 text-[16px] md:flex">
           {NavItems.filter((item) => item.key !== "logo").map((item) => (
             <li
               key={item.key}

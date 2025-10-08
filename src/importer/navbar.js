@@ -3,7 +3,7 @@ const NavItems = [
   // logo item
   {
     key: 'logo',
-    // label: Logo,
+    label: Logo,
     icon: Logo,
     style: { fontSize: '24px', fontWeight: 'bold', color: 'var(--color-primary-dark)' },
   },

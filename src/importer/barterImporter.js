@@ -91,7 +91,7 @@ const nationalShowInfo = {
       ],
     },
     {
-      title: "IPL & Asi Cup",
+      title: "IPL & Asia Cup",
       type: "card",
       images: [
         { name: "Product 1", img: IPLImages[0] },
