@@ -10,7 +10,7 @@ const SectionRenderer = () => {
   
   return (
     // <>
-    <div className='flex flex-col items-center justify-center w-full gap-5'>
+    <div className='flex flex-col items-center justify-center w-full  '>
       {/* <div id="home"> */}
         <Home/>
       {/* </div> */}
