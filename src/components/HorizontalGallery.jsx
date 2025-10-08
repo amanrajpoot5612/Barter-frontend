@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const HorizontalGallery = ({ images = [], speed = 0.5 }) => {
   const containerRef = useRef(null);
-  const [direction, setDirection] = useState(-1); 
+  const [direction, setDirection] = useState(-1);
   const [position, setPosition] = useState(0);
 
   useEffect(() => {
@@ -28,28 +28,31 @@ const HorizontalGallery = ({ images = [], speed = 0.5 }) => {
 
   return (
     <div
-      className="overflow-hidden w-9/10 relative rounded-2xl bg-gradient-to-b from-gray-800 via-gray-600 to-gray-400"
+      className="relative w-9/10 overflow-hidden rounded-2xl bg-gradient-to-b from-gray-800 via-gray-600 to-gray-400"
       onMouseEnter={() => setDirection(1)}
       onMouseLeave={() => setDirection(-1)}
     >
       <div
         ref={containerRef}
-        className="flex whitespace-nowrap wrapper rounded-2xl"
+        className="wrapper flex rounded-2xl whitespace-nowrap"
         style={{ transform: `translateX(${position}px)` }}
-      > 
+      >
         {[...images, ...images].map((img, index) => (
-          <img
+          <div
             key={index}
-            src={img.img} // make sure this property exists!
-            alt={img.name || `gallery-${index}`}
-            className={`w-48 h-48 object-contain mx-2 flex-shrink-0 item${index+1}`}
-            draggable={false}
-          />
+            className="mx-2 h-48 w-48 flex flex-shrink-0 overflow-hidden object-cover rounded-xl items-center justify-center"
+          >
+            <img
+              src={img.img}
+              alt={img.name || `gallery-${index}`}
+              className="h-1/2 w-full object-cover"
+              draggable={false}
+            />
+          </div>
         ))}
       </div>
     </div>
   );
 };
-
 
 export default HorizontalGallery;

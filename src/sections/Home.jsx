@@ -1,25 +1,29 @@
-import React from "react";
-import MainCarousel from "../components/MainCarousel";
-import ActionButton from "../components/ActionButton";
+import React from 'react';
+import MainCarousel from '../components/MainCarousel';
+import ActionButton from '../components/ActionButton';
 // import ArrowRight from "./src/assets/icons/arrow-right.svg";
 // import ArrowRight from "../assets/icons/arrow-right.svg";
 
 const hero = {
-  title: "Welcome to Barter",
+  title: 'Welcome to Barter',
   description:
-    "Trade your items with ease and connect with others in your community.",
-  buttonText: "Get Started",
+    'Trade your items with ease and connect with others in your community.',
+  buttonText: 'Get Started',
 };
+
 
 const Home = () => {
   return (
-    <div className="home-component flex min-h-[calc(100vh-45px)] items-center justify-between bg-gradient-to-r from-pink-200 via-pink-100 px-12 w-full" id="home">
+    <div
+      className="home-component flex min-h-[calc(100vh-45px)] items-center justify-between bg-gradient-to-r from-black via-gray-900 px-12"
+      id="home"
+    >
       {/* Left: Hero Section */}
       <div className="hero flex-1 pr-8">
         <h1 className="mb-6 text-5xl leading-tight font-extrabold text-[var(--color-primary-dark)]">
           {hero.title}
         </h1>
-        <p className="mb-10 max-w-md text-lg text-black">
+        <p className="hero-description mb-10 max-w-md text-lg text-white">
           {hero.description}
         </p>
         <div className="button-component">
@@ -28,7 +32,7 @@ const Home = () => {
       </div>
 
       {/* Right: Carousel */}
-      <div className="main-carousel flex flex-1 justify-center">
+      <div className="main-carousel flex flex-1 justify-center overflow-hidden w-full max-w-screen-lg">
         <MainCarousel></MainCarousel>
       </div>
     </div>

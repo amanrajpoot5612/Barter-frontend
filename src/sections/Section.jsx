@@ -15,28 +15,33 @@ const Section = ({ SectionInfo }) => {
   }, [SectionInfo]);
 
   return (
-    <div className="section-component">
-      {/* Title */}
-      <h2 className="py-8 text-center text-6xl hover:underline decoration-pink-300 transition-all delay-300">
+    <>
+      <span id="underline-container">
+      <h2 className="underline-animation py-8 text-center text-6xl transition-all delay-300">
         {SectionInfo.title}
+        
       </h2>
+      </span>
+    
+    <div className="section-component bg-white flex justify-center items-center">
+      {/* Title */}
 
-      <div className="text-image-container flex flex-col md:flex-row gap-8">
+      <div className="text-image-container flex flex-col md:flex-row p-6 bg-gradient-to-b from-gray-800 via-gray-600 to-gray-400 w-9/10 rounded-2xl  ">
         {/* Text Section */}
         <div
           ref={textRef}
-          className={`text-content-component flex-1 p-6 relative transition-all duration-500 overflow-hidden`}
+          className={`text-content-component flex-1 relative transition-all duration-500 overflow-hidden`}
           style={{ maxHeight: expanded ? "none" : `${MAX_HEIGHT}px` }}
         >
           {SectionInfo?.preHeading ? (
             <h4 className="preheading">{SectionInfo.preHeading}</h4>
           ) : null}
 
-          <h3 className="heading text-4xl font-extrabold text-gray-800">
+          <h3 className="section-heading text-4xl font-extrabold text-white py-5">
             {SectionInfo.heading}
           </h3>
 
-          <div className="description space-y-4 leading-relaxed text-gray-700">
+          <div className="description space-y-4 leading-relaxed text-gray-100 pb-5">
             {SectionInfo.sections.map((section, idx) =>
               section.type === "paragraphs" ? (
                 <div key={idx} className="space-y-3 leading-relaxed">
@@ -69,7 +74,7 @@ const Section = ({ SectionInfo }) => {
 
           {/* Read More Button */}
           {showReadMore && (
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent text-center pt-12">
+            <div className="absolute bottom-0 left-0 right-0 text-center pt-12">
               <button
                 onClick={() => setExpanded(!expanded)}
                 className="text-blue-600 font-semibold hover:underline"
@@ -81,11 +86,12 @@ const Section = ({ SectionInfo }) => {
         </div>
 
         {/* Image Section */}
-        <div className="image-component flex flex-1 items-center justify-center rounded-2xl bg-gray-100 px-7">
+        <div className="image-component flex flex-1 items-center justify-center rounded-2xl">
           <ImageComponent imageInfo={SectionInfo.imageInfo} />
         </div>
       </div>
     </div>
+    </>
   );
 };
 

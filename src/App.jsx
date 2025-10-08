@@ -26,7 +26,7 @@ const App = () => {
     //   <GallerySlider/>
 
     // </div>
-    <div className="app-container flex min-h-screen flex-col">
+    <div className="app-container flex min-h-screen flex-col min-w-screen">
         
       <NavbarRenderer></NavbarRenderer>
       <SectionRenderer></SectionRenderer>
