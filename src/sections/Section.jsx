@@ -34,7 +34,7 @@ const Section = ({ SectionInfo }) => {
           style={{ maxHeight: expanded ? "none" : `${MAX_HEIGHT}px` }}
         >
           {SectionInfo?.preHeading ? (
-            <h4 className="preheading">{SectionInfo.preHeading}</h4>
+            <h4 className="preheading text-3xl font-extrabold text-white">{SectionInfo.preHeading}</h4>
           ) : null}
 
           <h3 className="section-heading text-4xl font-extrabold text-white py-5">

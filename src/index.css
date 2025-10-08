@@ -266,6 +266,13 @@ h2:hover {
   background-color: rgb(32, 32, 32); /* optional if you want the bg to stay */
 }
 
+.preheading{
+  font-family: 'Roboto Slab', serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
 
 @import 'tailwindcss';
 
