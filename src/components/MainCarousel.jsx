@@ -4,7 +4,7 @@ import { Demo1, Demo2, Demo3, Demo4 } from '../importer/importer.js';
 
 const images = [Demo1, Demo2, Demo3, Demo4];
 
-const MainCarousel = () => {
+const MainCarousel = ({images}) => {
   return (
     <div className="main-carousel w-9/10 max-w-4xl mx-auto">
       <Carousel

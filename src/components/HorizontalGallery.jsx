@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const HorizontalGallery = ({ images = [], speed = 0.5 }) => {
+const HorizontalGallery = ({ images = [], speed = 2 }) => {
   const containerRef = useRef(null);
   const [direction, setDirection] = useState(-1);
   const [position, setPosition] = useState(0);
