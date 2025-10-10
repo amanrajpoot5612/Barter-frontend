@@ -50,6 +50,22 @@ const Test = {
 };
 export { Test };
 
+const images = [Demo1, Demo2, Demo3, Demo4]
+const heroInfo = {
+  heading: 'Welcome to Barter',
+  description:
+    'Trade your items with ease and connect with others in your community.',
+  buttons: [
+    {
+      label: 'Get Started',
+      link: "#",
+      type: "get-started"
+    }
+  ],
+  images: images
+};
+export { heroInfo }
+
 import AboutImg from '../assets/img/about-section/about-us.webp'
 const AboutInfo = {
   title: "About Us",
