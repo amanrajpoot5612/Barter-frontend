@@ -14,11 +14,15 @@ const Section = ({ SectionInfo }) => {
     }
   }, [SectionInfo]);
 
+  console.log("sectionInfo", SectionInfo);
+  console.log("SectionInfo?.section?.heading", SectionInfo?.section?.heading);
+  
+
   return (
     <>
       <span id="underline-container">
       <h2 className="underline-animation py-8 text-center text-6xl transition-all delay-300">
-        {SectionInfo.title}
+        {SectionInfo.name}
         
       </h2>
       </span>
@@ -33,44 +37,43 @@ const Section = ({ SectionInfo }) => {
           className={`text-content-component flex-1 relative transition-all duration-500 overflow-hidden`}
           style={{ maxHeight: expanded ? "none" : `${MAX_HEIGHT}px` }}
         >
-          {SectionInfo?.preHeading ? (
-            <h4 className="preheading text-3xl font-extrabold text-white">{SectionInfo.preHeading}</h4>
+          {SectionInfo?.section?.preHeading ? (
+            <h4 className="preheading text-3xl font-extrabold text-white">{SectionInfo.section.preHeading}</h4>
           ) : null}
 
           <h3 className="section-heading text-4xl font-extrabold text-white py-5">
-            {SectionInfo.heading}
+            {SectionInfo?.section?.heading}
           </h3>
 
           <div className="description space-y-4 leading-relaxed text-gray-100 pb-5">
-            {SectionInfo.sections.map((section, idx) =>
-              section.type === "paragraphs" ? (
-                <div key={idx} className="space-y-3 leading-relaxed">
-                  {section.content.map((p, i) => (
-                    <p key={i} className="sm:text-sm lg:text-base">
-                      {p}
-                    </p>
-                  ))}
-                </div>
-              ) : section.type === "list" ? (
-                <div key={idx} className="space-y-6">
-                  {section.lists.map((list, i) => (
-                    <div key={i}>
-                      <h3 className="mb-2 text-xl font-semibold text-gray-800">
-                        {list.title}
-                      </h3>
-                      <ul className="list-disc space-y-1 pl-6">
-                        {list.items.map((item, j) => (
-                          <li key={j} className="text-lg">
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              ) : null
-            )}
-          </div>
+  {/* Paragraphs */}
+  {SectionInfo?.section?.description?.paragraphs?.map((p, idx) => (
+    <div key={idx} className="space-y-3 leading-relaxed">
+      <p className="sm:text-sm lg:text-base">{p}</p>
+    </div>
+  ))}
+
+  {/* Lists */}
+  {SectionInfo?.section?.description?.list?.length > 0 && (
+    <div className="space-y-6">
+      {SectionInfo.section.description.list.map((list, i) => (
+        <div key={i}>
+          <h3 className="mb-2 text-xl font-semibold text-gray-800">
+            {list.title}
+          </h3>
+          <ul className="list-disc space-y-1 pl-6">
+            {list.items.map((item, j) => (
+              <li key={j} className="text-lg">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  )}
+</div>
+
 
           {/* Read More Button */}
           {showReadMore && (
@@ -87,7 +90,8 @@ const Section = ({ SectionInfo }) => {
 
         {/* Image Section */}
         <div className="image-component flex flex-1 items-center justify-center rounded-2xl">
-          <ImageComponent imageInfo={SectionInfo.imageInfo} />
+          {/* {console.log("SectionInfo?.section?.imageURL[0]", SectionInfo?.section?.imageURL[0])} */}
+          <ImageComponent imageInfo={SectionInfo?.section?.description?.imageURL} />
         </div>
       </div>
     </div>
