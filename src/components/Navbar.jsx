@@ -20,9 +20,9 @@ const Navbar = ({ NavItems }) => {
       <div className="flex h-[55px] items-center justify-between rounded-b-2xl bg-black px-4 md:px-8">
         {/* Logo */}
         <div className="flex items-center">
-          {NavItems.find((item) => item.key === "logo")?.icon && (
+          {NavItems.find((item) => item.label === "Logo")?.icon && (
             <img
-              src={NavItems.find((item) => item.key === "logo")?.icon}
+              src={NavItems.find((item) => item.label === "Logo")?.icon}
               alt="Logo"
               width={70}
               height={70}

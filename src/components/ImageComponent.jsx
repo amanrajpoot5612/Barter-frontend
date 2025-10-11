@@ -5,7 +5,7 @@ const ImageComponent = ({imageInfo}) => {
 
   return (
       <Image.PreviewGroup>
-        {imageInfo.items.map((img, idx) => (
+        {imageInfo?.map((img, idx) => (
           <Image
             key={idx}
             width={"80%"}          // or "100%" depending on design

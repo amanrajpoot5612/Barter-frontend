@@ -16,7 +16,7 @@ const MainCarousel = ({images}) => {
         fade
         adaptiveHeight={true}
       >
-        {images.map((img, index) => (
+        {images?.map((img, index) => (
           <div key={index} className="flex justify-center items-center">
             <img
               src={img}
