@@ -4,6 +4,7 @@ import CardRenderer from "../renderer/CardRenderer";
 import './BarterSection.style.css'
 
 const BarterSection = ({ barterInformation }) => {
+  
   return (
     <div className="barter-section flex flex-col">
       {barterInformation?.map((barterCategory) => (
