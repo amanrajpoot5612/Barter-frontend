@@ -223,6 +223,17 @@ const regionalShowInfo = {
   ],
 };
 
+
+
+export { productInfo };
+export { nationalShowInfo };
+export { regionalShowInfo};
+export { cardInfo };
+
+const barterInfo = [productInfo, nationalShowInfo, regionalShowInfo];
+export {barterInfo};
+
+
 const cardInfo = [
   {
     imageUrl:
@@ -274,11 +285,3 @@ const cardInfo = [
     },
   },
 ];
-
-export { productInfo };
-export { nationalShowInfo };
-export { regionalShowInfo};
-export { cardInfo };
-
-const barterInfo = [productInfo, nationalShowInfo, regionalShowInfo];
-export {barterInfo};
