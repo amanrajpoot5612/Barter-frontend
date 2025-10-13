@@ -8,7 +8,7 @@ const CardRenderer = ({cardInfo}) => {
     const cards = Array.isArray(cardInfo) ? cardInfo : [];
     
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5 justify-center bg-gradient-to-b from-gray-800 via-gray-600 to-gray-400">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5 justify-center  bg-gradient-to-b from-gray-800 via-gray-600 to-gray-400">
       {cards.map((card, idx) => (
         <div key={idx} className="flex flex-col  justify-center py-2">
           {/* Remove semicolon and render name properly */}
