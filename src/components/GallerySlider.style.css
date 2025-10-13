@@ -1,0 +1,51 @@
+/* Wrapper hides overflow */
+.gallery-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: #f3f3f3;
+  padding: 20px 0;
+}
+
+/* Track that moves */
+.gallery-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 10s linear infinite;
+}
+
+/* Pause on hover */
+.gallery-wrapper:hover .gallery-track {
+  animation-play-state: paused;
+}
+
+/* Child boxes */
+.gallery-child {
+  width: 200px;
+  height: 200px;
+  margin-right: 16px; /* gap between items */
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Colors */
+.gallery-child1 { background-color: red; }
+.gallery-child2 { background-color: blue; }
+.gallery-child3 { background-color: yellow; }
+.gallery-child4 { background-color: green; }
+.gallery-child5 { background-color: pink; }
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-33.33%); /* move exactly half (first set) */
+  }
+}
+ 
