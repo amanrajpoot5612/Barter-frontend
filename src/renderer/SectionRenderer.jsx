@@ -12,15 +12,15 @@ const SectionRenderer = () => {
   useEffect(() => {
     const fetchPage = async () => {
       const pageData = await fetch(`${backend_page_url}/get-pages`);
-      console.log("pageData", pageData);
+      // console.log("pageData", pageData);
       const data = await pageData?.json()
-      console.log("data", data);
+      // console.log("data", data);
       
       setPageInfo(data?.page);
     }
     fetchPage();
   }, [])
-  console.log("pageInfo", pageInfo);
+  // console.log("pageInfo", pageInfo);
   
   return (
     <div className='flex flex-col items-center justify-center w-full'>
