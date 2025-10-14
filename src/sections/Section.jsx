@@ -14,8 +14,8 @@ const Section = ({ SectionInfo }) => {
     }
   }, [SectionInfo]);
 
-  console.log("sectionInfo", SectionInfo);
-  console.log("SectionInfo?.section?.heading", SectionInfo?.section?.heading);
+  // console.log("sectionInfo", SectionInfo);
+  // console.log("SectionInfo?.section?.heading", SectionInfo?.section?.heading);
   
 
   return (
