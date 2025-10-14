@@ -43,7 +43,7 @@ const HorizontalGallery = ({ images = [], speed = 2 }) => {
             className="mx-2 h-48 w-48 flex flex-shrink-0 overflow-hidden object-cover rounded-xl items-center justify-center"
           >
             <img
-              src={img.img}
+              src={img.url}
               alt={img.name || `gallery-${index}`}
               className="h-1/2 w-full object-cover"
               draggable={false}

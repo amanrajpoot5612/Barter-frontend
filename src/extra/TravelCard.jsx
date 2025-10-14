@@ -5,7 +5,7 @@ const TravelCard = ({ cardInfo }) => {
     <div className="images-card group relative w-[250px] rounded-xl overflow-hidden shadow-xl bg-white/10 backdrop-blur-lg border-white/20 hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] transition-all duration-300 border-4">
       {/* Image */}
       <img
-        src={cardInfo.img}
+        src={cardInfo.url}
         className="w-full h-[350px] object-fill"
         alt={cardInfo.title || "Travel Destination"}
       />
