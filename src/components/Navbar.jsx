@@ -40,7 +40,7 @@ const Navbar = ({ NavItems }) => {
               className="text-gray-200 transition-all duration-300 hover:scale-110 hover:cursor-pointer hover:font-medium hover:text-white hover:underline"
             >
               {/* <a href={item.key}> */}
-              {item.label}
+              {item.icon ? null : item?.label}
               {/* </a> */}
             </li>
           ))}
